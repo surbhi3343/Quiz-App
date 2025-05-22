@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz Application</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div id="first">
+        <div class="mainContainer1">
+            <div class="subContainer1">
+                <img src="brain.png" width="100">
+                <p>Quiz App</p>
+            </div>
+            <div class="subContainer2">
+                <p>Test your knowledge with this app!</p>
+                <button id="playNow"  onclick="openSecond()">Play Now!</button>
+            </div>
+        </div>
+    </div>
+    <div id="second">
+        <div class="mainContainer2">
+            <div class="secondSub1">
+                <p class="p1">Quiz</p>
+                <div class="progressBar"></div>
+                <p>0% complete</p>
+            </div>
+            <div class="secondSub2">
+                <p class="questions" id="questarea">Questions<p>
+                <div class="answers"></div>
+                <div class="answers">Options</div>
+                <div class="answers">Options</div>
+                <div class="answers">Options</div>
+            </div>
+            <div class="btnDiv">
+                <button onclick="backbtn()">Back</button>
+                <button onclick ="skipbtn()" >Skip</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    </body>
+</html>
