@@ -1,0 +1,1 @@
+This is a Vanilla JavaScript Quiz App that dynamically loads multiple-choice questions, tracks user scores and provides feedback after submission. Built to practice DOM manipulation and logical flow in  JavaScript.
