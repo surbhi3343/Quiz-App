@@ -3,7 +3,8 @@ let Allans = [];
 let indx = 0;
 let score = 0;
 let selectedAns = [];
-
+let width = 15;
+let progress = 0;
 
 function openSecond() {
   document.getElementById("second").style.display = "flex";
@@ -26,6 +27,7 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=mul
 function nextQues() {
   if(indx >= ques.length) {
     alert(`Quiz is finished.Your score is:${score}/10`);
+    location.reload();
     return;
   }
   document.getElementById("questarea").textContent = decodeHTML(ques[indx].question);
@@ -40,6 +42,14 @@ function nextQues() {
   });
 
   allbtns = document.getElementsByClassName("answers");
+  
+  const element = document.getElementById("progressText");
+  for (let i = 0; i < allbtns.length; i++) {
+    allbtns[i].addEventListener("click", function () {
+      progress += 10;
+      element.innerHTML = progress + " % completed";
+    });
+  }
   Allans.forEach((ans,i) => {
     if(allbtns[i]) {
       allbtns[i].innerHTML = ans;
@@ -84,6 +94,9 @@ function showCorrect (selectedIndex,correct) {
 
 
 function skipbtn () {
+  width += 15;
+  const element = document.getElementById("progresschild");
+  element.style.width = width + "px";
   indx++;
   nextQues();
 }
