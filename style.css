@@ -81,11 +81,17 @@
     font-size: 40px;
     font-weight: bold;
 }
-.progressBar {
+#progressBar {
     width: 150px;
     height:15px;
   background-color: gray;
   border-radius: 10px;
+}
+#progressBar div {
+    width:15px;
+    height:15px;
+    background-color: #e14ae1;
+    border-radius: 10px;
 }
 .secondSub2 {
     display:flex;
