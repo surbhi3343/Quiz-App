@@ -36,12 +36,16 @@
     color:white;
     font-weight: bold;
 }
+.subContainer2 {
+    display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
 #playNow {
     width: 12rem;
     height: 2rem;
-    position: relative;
-    top: 30px;
-    left: 25px;
     color:white;
     font-weight: bold;
     background-image: linear-gradient(to right,purple,blue);
